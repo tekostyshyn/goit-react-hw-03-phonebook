@@ -1,8 +1,9 @@
-import './Contact.scss'
+import './Contact.scss';
+import PropTypes from 'prop-types';
 
 const Contact = ({ name, number, children }) => {
   return (
-    <li className='contacts-list__item'>
+    <li className="contacts-list__item">
       {name}: {number}
       {children}
     </li>
@@ -10,3 +11,8 @@ const Contact = ({ name, number, children }) => {
 };
 
 export default Contact;
+
+Contact.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+};
